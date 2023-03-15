@@ -25,12 +25,19 @@ export default function Produto({
   preco,
 }: Props) {
   return (
-    <Card maxW="sm" boxShadow="4px 4px 5px rgba(0,0,0,0.5)">
+    <Card maxW="sm" boxShadow="4px 4px 5px rgba(0,0,0,0.5)" h="100%">
       <CardBody>
-        <Image src={linkImagem} alt={titulo} borderRadius="lg" />
+        <Image
+          src={linkImagem}
+          alt={titulo}
+          borderRadius="lg"
+          boxSize="250px"
+          objectFit="contain"
+          m="0 auto"
+        />
         <Stack mt="6" spacing="3">
           <Heading size="md">{titulo}</Heading>
-          <Text>{descricao}</Text>
+          <Text noOfLines={3}>{descricao}</Text>
           <Text color="red.600" fontSize="2xl" textAlign="end">
             {`R$ ${preco}`}
           </Text>
