@@ -9,6 +9,7 @@ import {
   Image,
   Stack,
   Text,
+  Tooltip,
 } from '@chakra-ui/react'
 
 interface Props {
@@ -37,7 +38,9 @@ export default function Produto({
         />
         <Stack mt="6" spacing="3">
           <Heading size="md">{titulo}</Heading>
-          <Text noOfLines={3}>{descricao}</Text>
+          <Tooltip label={descricao}>
+            <Text noOfLines={3}>{descricao}</Text>
+          </Tooltip>
           <Text color="red.600" fontSize="2xl" textAlign="end">
             {`R$ ${preco}`}
           </Text>
